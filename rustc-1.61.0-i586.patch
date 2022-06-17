@@ -1,0 +1,13 @@
+diff -rau rustc-1.61.0-src-orig/compiler/rustc_driver/src/lib.rs rustc-1.61.0-src/compiler/rustc_driver/src/lib.rs
+--- rustc-1.61.0-src-orig/compiler/rustc_driver/src/lib.rs	2022-05-18 03:29:36.000000000 +0200
++++ rustc-1.61.0-src/compiler/rustc_driver/src/lib.rs	2022-06-17 08:51:53.400187002 +0200
+@@ -11,6 +11,9 @@
+ #![recursion_limit = "256"]
+ #![allow(rustc::potential_query_instability)]
+ 
++#[link(name="z")]
++extern {}
++
+ #[macro_use]
+ extern crate tracing;
+ 

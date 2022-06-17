@@ -11,4 +11,5 @@ patch -p1 < rustc-X.YY.Z-i586.patch
 ```
 
 A `config.toml` file can be used as configuration. Some parameters can be changed (like
-installation prefix).
+installation prefix). Unfortunatelly, this configuration need machine
+with SSE2 instructions to build Rust compiler for i586 architecture :(.

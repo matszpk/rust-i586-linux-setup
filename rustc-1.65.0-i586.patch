@@ -1,0 +1,13 @@
+diff -rau rustc-1.65.0-src-orig/compiler/rustc_driver/src/lib.rs rustc-1.65.0-src/compiler/rustc_driver/src/lib.rs
+--- rustc-1.65.0-src-orig/compiler/rustc_driver/src/lib.rs	2022-11-02 15:36:24.000000000 +0100
++++ rustc-1.65.0-src/compiler/rustc_driver/src/lib.rs	2022-11-08 15:18:43.968248524 +0100
+@@ -12,6 +12,9 @@
+ #![deny(rustc::untranslatable_diagnostic)]
+ #![deny(rustc::diagnostic_outside_of_impl)]
+ 
++#[link(name="z")]
++extern {}
++
+ #[macro_use]
+ extern crate tracing;
+
